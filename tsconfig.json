@@ -14,12 +14,11 @@
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
-      {
-        "name": "next"
-      }
+      { "name": "next" }
     ],
+    "baseUrl": ".",                // 👈 required for path mapping
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["*"]                 // now @/... resolves to project root
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
